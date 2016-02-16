@@ -296,6 +296,7 @@ select {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 70px;
+  background: #fcfdfe;
 }
 .to-action__read {
   width: 50%;
@@ -312,7 +313,6 @@ select {
   -webkit-font-smoothing: antialiased;
   font-size: 30px;
   line-height: 45px;
-  background: #fcfdfe;
 }
 .to-action__title {
   font-size: 30px;
