@@ -1,0 +1,37 @@
+.preview
+  display flex
+  flex-direction row
+  justify-content center
+  align-items center
+  margin-bottom 10px
+  
+  &_first
+    margin-top 50px
+    
+    & .preview__item
+      &:after
+        content ''
+        display inline-block
+        width 20%
+        height 2px
+        background #df1e3a
+  
+  &__item
+    width 33.3%
+    text-align center
+    
+  &__title
+    font-size 18px
+    line-height 27px
+    text-transform uppercase
+    color #464646
+    margin-top 20px
+    
+  &__description
+    font-size 14px
+    line-height 20px
+    color #464646
+    
+.check
+  fill #df1e3a
+  
