@@ -1,8 +1,5 @@
 .to-action
-  display flex
-  flex-direction row
-  justify-content center
-  align-items center
+  centered_flex()
   margin-top 70px
   background #fcfdfe
   
@@ -12,27 +9,47 @@
     padding 12px 33px 0px
     
   &__buy
+    bold-text()
     width 50%
-    padding-left 80px
-    text-decoration none
-    color #df1e3a
-    text-transform uppercase
-    font-weight bold
-    -webkit-font-smoothing antialiased
+    text-align center
     font-size 30px
     line-height 45px
+    display block
     
+    &:hover
+      & .to-action__link
+        color color_red_hover
+        transition color .3s ease-in
+ 
+  &__link
+    display inline-block
+    text-decoration none
+    color color_red
+    text-align left
+    transition color .15s ease-in
+    padding-right 100px
+    background-image url()
+    background-position right center
+    background-repeat no-repeat
+
   &__title
+    bold-text()
     font-size 30px
     line-height 45px
-    font-weight bold
-    color #df1e3a
-    -webkit-font-smoothing antialiased
+    color color_red
     margin-bottom 30px
     text-align center
-    text-transform uppercase
     
   &__item
     font-size 14px
     line-height 20px
     margin-bottom 30px
+    color color_text
+    
+    &:before
+      content ''
+      display inline-block
+      width 22px
+      height 17px
+      margin-right 7px
+      background-image url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 62.4 47.7' style='enable-background:new 0 0 62.4 47.7;' xml:space='preserve'><path fill='#df1e3a' d='M24.1,27.6c0.3-0.5,0.5-0.9,0.8-1.3c8.2-8.2,16.4-16.3,24.4-24.6c2.2-2.3,5-2.5,7.2,0.1C58,3.4,59.6,4.8,61,6.3c1.9,1.9,1.9,4.2,0,6C49.7,23.6,38.4,34.9,27,46.2c-2,2-4.2,2-6.2,0C14.4,39.8,8,33.4,1.5,26.9c-2-2-2-4.2,0-6.2c1.6-1.6,3.3-3.3,4.9-4.9c1.9-1.9,4.1-1.9,6,0C16.2,19.7,20,23.5,24.1,27.6z'/></svg>")

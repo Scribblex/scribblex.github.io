@@ -1,37 +1,56 @@
 .preview
-  display flex
-  flex-direction row
-  justify-content center
-  align-items center
-  margin-bottom 10px
-  
-  &_first
-    margin-top 50px
-    
-    & .preview__item
-      &:after
-        content ''
-        display inline-block
-        width 20%
-        height 2px
-        background #df1e3a
-  
+  centered_flex()
+  align-items flex-start
+  margin 50px 0 10px
+                      
   &__item
     width 33.3%
     text-align center
+    cursor pointer
+    
+    &:hover
+      .svg
+        width 87px
+        transition width .3s ease-in
+
+      .check
+        fill color_red_hover
+        transition fill .3s ease-in
+        
+      & .preview__title
+        &:after
+          background-color color_red_hover
+          transition background-color .3s ease-in
     
   &__title
     font-size 18px
     line-height 27px
     text-transform uppercase
-    color #464646
+    color color_text
     margin-top 20px
+    
+    &:after
+      content ''
+      display block
+      width 20%
+      height 2px
+      margin 12px auto 12px
+      background-color color_red
+      transition background-color .15s ease-in
     
   &__description
     font-size 14px
     line-height 20px
-    color #464646
+    color color_text
     
-.check
-  fill #df1e3a
+.svg
+  width 67px
+  height 100px
+  transition width .15s ease-in
   
+  &_last
+    width 52px
+
+.check
+  fill color_red
+  transition fill .15s ease-in

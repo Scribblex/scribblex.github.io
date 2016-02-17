@@ -1,12 +1,10 @@
 .intro
   
   &__title
-    text-transform uppercase  
-    font-weight bold
+    bold-text()
     font-size 100px
     line-height 150px
     color #fff
-    -webkit-font-smoothing antialiased
     margin-bottom 50px
 
   
@@ -17,12 +15,10 @@
     color #fff
     
   &__button
-    text-transform uppercase
-    -webkit-font-smoothing: antialiased;  
+    bold-text()
     font-size 24px
     line-height 0
-    font-weight bold
-    color #df1e3a
+    color color_red
     text-decoration none
     display inline-block
     padding 36px
@@ -32,4 +28,14 @@
     position absolute
     bottom 80px
     right 40px
+    transition color, box-shadow .15s ease-in
+    box-shadow inset 0px -2px 22px -5px rgba(1,1,1,0)
+
+    
+    &:hover
+      color color_red_hover
+      transition color, box-shadow .3s ease-in
+      box-shadow inset 0px -2px 22px -5px rgba(1,1,1,0.81)
+
+
 

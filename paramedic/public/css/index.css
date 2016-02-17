@@ -153,21 +153,13 @@ select {
 }
 .fullscreen {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   padding: 130px 40px 0;
   background: -webkit-linear-gradient(left, #83a4d4 10%, #5e2d79 90%);
   background: linear-gradient(90deg, #83a4d4 10%, #5e2d79 90%);
 }
 .top-menu {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background: rgba(255,255,255,0.95);
-  z-index: 5555;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -181,28 +173,46 @@ select {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 30px 0;
+  background: rgba(255,255,255,0.95);
+  z-index: 5555;
 }
 .top-menu__item {
-  font-size: 24px;
-  line-height: 0;
   font-weight: bold;
   text-transform: uppercase;
-  text-decoration: none;
-  color: #df1e3a;
   -webkit-font-smoothing: antialiased;
+  font-size: 24px;
+  line-height: 0;
+  color: #df1e3a;
   width: 33.3%;
   text-align: center;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease-in;
+  transition: color 0.15s ease-in;
 }
 .top-menu__item:last-child {
   margin-right: 0;
 }
+.top-menu__item:hover {
+  color: #b5021c;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
 .intro__title {
-  text-transform: uppercase;
   font-weight: bold;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
   font-size: 100px;
   line-height: 150px;
   color: #fff;
-  -webkit-font-smoothing: antialiased;
   margin-bottom: 50px;
 }
 .intro__subtitle {
@@ -212,11 +222,11 @@ select {
   color: #fff;
 }
 .intro__button {
+  font-weight: bold;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
   font-size: 24px;
   line-height: 0;
-  font-weight: bold;
   color: #df1e3a;
   text-decoration: none;
   display: inline-block;
@@ -227,6 +237,15 @@ select {
   position: absolute;
   bottom: 80px;
   right: 40px;
+  -webkit-transition: color, box-shadow 0.15s ease-in;
+  transition: color, box-shadow 0.15s ease-in;
+  box-shadow: inset 0px -2px 22px -5px rgba(1,1,1,0);
+}
+.intro__button:hover {
+  color: #b5021c;
+  -webkit-transition: color, box-shadow 0.3s ease-in;
+  transition: color, box-shadow 0.3s ease-in;
+  box-shadow: inset 0px -2px 22px -5px rgba(1,1,1,0.81);
 }
 .preview {
   display: -webkit-box;
@@ -246,21 +265,31 @@ select {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 10px;
-}
-.preview_first {
-  margin-top: 50px;
-}
-.preview_first .preview__item:after {
-  content: '';
-  display: inline-block;
-  width: 20%;
-  height: 2px;
-  background: #df1e3a;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 50px 0 10px;
 }
 .preview__item {
   width: 33.3%;
   text-align: center;
+  cursor: pointer;
+}
+.preview__item:hover .svg {
+  width: 87px;
+  -webkit-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
+}
+.preview__item:hover .check {
+  fill: #b5021c;
+  -webkit-transition: fill 0.3s ease-in;
+  transition: fill 0.3s ease-in;
+}
+.preview__item:hover .preview__title:after {
+  background-color: #b5021c;
+  -webkit-transition: background-color 0.3s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 .preview__title {
   font-size: 18px;
@@ -269,13 +298,34 @@ select {
   color: #464646;
   margin-top: 20px;
 }
+.preview__title:after {
+  content: '';
+  display: block;
+  width: 20%;
+  height: 2px;
+  margin: 12px auto 12px;
+  background-color: #df1e3a;
+  -webkit-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in;
+}
 .preview__description {
   font-size: 14px;
   line-height: 20px;
   color: #464646;
 }
+.svg {
+  width: 67px;
+  height: 100px;
+  -webkit-transition: width 0.15s ease-in;
+  transition: width 0.15s ease-in;
+}
+.svg_last {
+  width: 52px;
+}
 .check {
   fill: #df1e3a;
+  -webkit-transition: fill 0.15s ease-in;
+  transition: fill 0.15s ease-in;
 }
 .to-action {
   display: -webkit-box;
@@ -304,30 +354,51 @@ select {
   padding: 12px 33px 0px;
 }
 .to-action__buy {
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
   width: 50%;
-  padding-left: 80px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 45px;
+  display: block;
+}
+.to-action__buy:hover .to-action__link {
+  color: #b5021c;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+.to-action__link {
+  display: inline-block;
   text-decoration: none;
   color: #df1e3a;
-  text-transform: uppercase;
-  font-weight: bold;
-  -webkit-font-smoothing: antialiased;
-  font-size: 30px;
-  line-height: 45px;
+  text-align: left;
+  -webkit-transition: color 0.15s ease-in;
+  transition: color 0.15s ease-in;
 }
 .to-action__title {
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
   font-size: 30px;
   line-height: 45px;
-  font-weight: bold;
   color: #df1e3a;
-  -webkit-font-smoothing: antialiased;
   margin-bottom: 30px;
   text-align: center;
-  text-transform: uppercase;
 }
 .to-action__item {
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 30px;
+  color: #464646;
+}
+.to-action__item:before {
+  content: '';
+  display: inline-block;
+  width: 22px;
+  height: 17px;
+  margin-right: 7px;
+  background-image: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 62.4 47.7' style='enable-background:new 0 0 62.4 47.7;' xml:space='preserve'><path fill='#df1e3a' d='M24.1,27.6c0.3-0.5,0.5-0.9,0.8-1.3c8.2-8.2,16.4-16.3,24.4-24.6c2.2-2.3,5-2.5,7.2,0.1C58,3.4,59.6,4.8,61,6.3c1.9,1.9,1.9,4.2,0,6C49.7,23.6,38.4,34.9,27,46.2c-2,2-4.2,2-6.2,0C14.4,39.8,8,33.4,1.5,26.9c-2-2-2-4.2,0-6.2c1.6-1.6,3.3-3.3,4.9-4.9c1.9-1.9,4.1-1.9,6,0C16.2,19.7,20,23.5,24.1,27.6z'/></svg>");
 }
 .footer {
   background: #7d7d7d;
