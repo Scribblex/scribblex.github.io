@@ -288,8 +288,9 @@ select {
 }
 .preview__item:hover .preview__title:after {
   background-color: #b5021c;
-  -webkit-transition: background-color 0.3s ease-in;
-  transition: background-color 0.3s ease-in;
+  width: 50%;
+  -webkit-transition: background-color, width 0.3s ease-in;
+  transition: background-color, width 0.3s ease-in;
 }
 .preview__title {
   font-size: 18px;
@@ -305,8 +306,8 @@ select {
   height: 2px;
   margin: 12px auto 12px;
   background-color: #df1e3a;
-  -webkit-transition: background-color 0.15s ease-in;
-  transition: background-color 0.15s ease-in;
+  -webkit-transition: background-color, width 0.15s ease-in;
+  transition: background-color, width 0.15s ease-in;
 }
 .preview__description {
   font-size: 14px;
@@ -375,6 +376,10 @@ select {
   text-align: left;
   -webkit-transition: color 0.15s ease-in;
   transition: color 0.15s ease-in;
+  padding-right: 100px;
+  background-image: url("");
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 .to-action__title {
   font-weight: bold;
