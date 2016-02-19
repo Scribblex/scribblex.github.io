@@ -154,7 +154,7 @@ select {
 .fullscreen {
   min-width: 100vw;
   min-height: 100vh;
-  padding: 130px 40px 0;
+  padding: 130px 40px 40px;
   background: -webkit-linear-gradient(left, #83a4d4 10%, #5e2d79 90%);
   background: linear-gradient(90deg, #83a4d4 10%, #5e2d79 90%);
   display: -webkit-box;
@@ -176,8 +176,6 @@ select {
 .fullscreen__bottom {
   text-align: right;
   height: 78px;
-  box-sizing: content-box;
-  padding-bottom: 80px;
 }
 .top-menu {
   display: -webkit-box;
@@ -409,8 +407,8 @@ select {
   text-align: center;
 }
 .to-action__item {
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 24px;
   margin-bottom: 30px;
   color: #464646;
 }
