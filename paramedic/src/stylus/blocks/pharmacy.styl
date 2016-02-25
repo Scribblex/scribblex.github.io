@@ -1,0 +1,34 @@
+.pharmacy-list
+  list-style none
+  font-size 0
+  
+  &__item
+    display inline-block
+    width 460px
+    padding 7px 0
+    border-bottom 1px dotted #464646
+    margin-bottom 10px
+    margin-right 40px
+    font-size 16px
+    line-height 24px
+    color #464646
+    
+    &:before, &:after
+      content ''
+      display table
+      clear both
+    
+    &:nth-child(even)
+      margin-right 0
+      
+  &__key
+    font-size 18px
+    float left
+    
+  &__value
+    float right
+      
+.pharmacy-map
+  width 100%
+  height calc(100vh - 461px)
+    
