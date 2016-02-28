@@ -5,8 +5,10 @@
   top 0
   width 100%
   padding 30px 0
-  background rgba(255, 255, 255, .95)
+  background-color rgba(255, 255, 255, .95)
+  transition all .15s ease-in
   z-index 5555
+  border-bottom 1px solid transparent
   
   &__item
     bold-text()
@@ -24,5 +26,11 @@
     &:hover
       color color_red_hover
       transition color .3s ease-in
+      
+  &_scrolled
+    background-color rgba(222,232,250,0.95)
+    border-bottom 1px solid #DEE8FA
+    box-shadow 0px 6px 42px 14px rgba(222,232,250,0.6)
+    transition all .3s ease-in
 
   

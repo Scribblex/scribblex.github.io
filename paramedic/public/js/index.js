@@ -1,26 +1,15 @@
 'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
+window.addEventListener('scroll', function (e) {
+  var nav = document.querySelector('.js-nav');
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+  var INTRO_HEIGHT = document.querySelector('.js-intro').offsetHeight;
+  var NAV_HEIGHT = nav.offsetHeight;
+  var SCROLLED_CLASS = 'top-menu_scrolled';
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var Breaker = function () {
-  function Breaker() {
-    _classCallCheck(this, Breaker);
+  if (document.body.scrollTop > INTRO_HEIGHT - NAV_HEIGHT) {
+    nav.classList.add(SCROLLED_CLASS);
+  } else {
+    nav.classList.remove(SCROLLED_CLASS);
   }
-
-  _createClass(Breaker, [{
-    key: 'render',
-    value: function render() {
-      console.warn('I hate trance');
-    }
-  }]);
-
-  return Breaker;
-}();
-
-exports.default = Breaker;
+});
