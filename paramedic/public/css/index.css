@@ -379,6 +379,7 @@ body {
   width: 33.3%;
   text-align: center;
   cursor: pointer;
+  text-decoration: none;
 }
 .preview__item:hover .svg {
   width: 87px;

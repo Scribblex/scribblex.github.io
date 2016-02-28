@@ -8,7 +8,9 @@ window.addEventListener('scroll', e => {
   const SCROLLED_CLASS = 'top-menu_scrolled';
 
   if (document.body.scrollTop > INTRO_HEIGHT - NAV_HEIGHT) {
-    nav.classList.add(SCROLLED_CLASS);
+    if (!nav.classList.contains(SCROLLED_CLASS)) {
+      nav.classList.add(SCROLLED_CLASS);
+    }
   } else {
     nav.classList.remove(SCROLLED_CLASS)
   }
