@@ -477,6 +477,88 @@ body {
   margin-top: -50px;
   opacity: 0.5;
 }
+.science {
+  margin: 70px 33px;
+  font-size: 0;
+}
+.science__all {
+  text-decoration: none;
+  color: #df1e3a;
+  -webkit-transition: color 0.15s ease-in;
+  transition: color 0.15s ease-in;
+  font-size: 16px;
+  line-height: 0;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 30px;
+  display: block;
+}
+.science__all:hover {
+  color: #b5021c;
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in;
+}
+.science__title {
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  font-size: 30px;
+  line-height: 30px;
+  color: #df1e3a;
+  margin-bottom: 30px;
+  display: block;
+}
+.science__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+  margin-right: 5%;
+  text-align: center;
+  text-decoration: none;
+}
+.science__item:nth-child(3n + 1) {
+  margin-right: 0;
+}
+.science__item:hover .science__title:after {
+  background-color: #b5021c;
+  width: 50%;
+  -webkit-transition: background-color, width 0.3s ease-in;
+  transition: background-color, width 0.3s ease-in;
+}
+.science__cover {
+  height: 300px;
+  background-size: cover;
+  background-position: left top;
+  background-repeat: no-repeat;
+}
+.science__title {
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: uppercase;
+  color: #464646;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+.science__title:after {
+  content: '';
+  display: block;
+  width: 20%;
+  height: 2px;
+  margin: 12px auto 12px;
+  background-color: #df1e3a;
+  -webkit-transition: background-color, width 0.15s ease-in;
+  transition: background-color, width 0.15s ease-in;
+}
+.science__description {
+  font-size: 16px;
+  line-height: 24px;
+  color: #464646;
+}
 .to-action {
   display: -webkit-box;
   display: -webkit-flex;
@@ -660,7 +742,7 @@ body {
 }
 .pharmacy-map {
   width: 100%;
-  height: calc(100vh - 461px);
+  height: calc(100vh - 412px);
 }
 .footer {
   background: #7d7d7d;
