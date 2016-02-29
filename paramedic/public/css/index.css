@@ -520,7 +520,7 @@ body {
   text-align: center;
   text-decoration: none;
 }
-.science__item:nth-child(3n) {
+.science__item:nth-child(3n + 3) {
   margin-right: 0;
 }
 .science__item:hover .science__title:after {
